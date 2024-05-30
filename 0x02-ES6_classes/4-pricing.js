@@ -27,3 +27,4 @@ export default class {
     return amount * conversionRate;
   }
 }
+
