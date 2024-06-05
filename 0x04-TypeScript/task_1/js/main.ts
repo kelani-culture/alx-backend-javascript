@@ -19,3 +19,12 @@ const teacher3: Teacher = {
 interface Directors extends  Teacher {
   numberOfReports: number,
 };
+
+
+// a function that print teacher
+
+function printTeacher(firstName: string, lastName: string): string {
+  return firstName[0] + '. ' + lastName;
+}
+
+console.log(printTeacher(teacher3.firstName, teacher3.lastName));
