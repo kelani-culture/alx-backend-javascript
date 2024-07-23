@@ -27,15 +27,15 @@ function countStudents(path) {
                 numberOfStudents++;
             }
 
-            console.log(`Number of students: ${numberOfStudents}`);
+            let result = `Number of students: ${numberOfStudents}\n`;
             for (const field in students) {
                 const studentList = students[field];
-                console.log(`Number of students in ${field}: ${studentList.length}. List: ${studentList.join(', ')}`);
+                result += `Number of students in ${field}: ${studentList.length}. List: ${studentList.join(', ')}\n`;
             }
+            return result;
         })
         .catch((error) => {
-            console.error('Cannot load the database');
-            throw error;
+            throw new Error('Cannot load the database');
         });
 }
 
